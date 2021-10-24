@@ -1,0 +1,225 @@
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  margin-top: -9rem;
+}
+.listContainer .category {
+  margin-left: 3rem;
+  padding: 0.5rem 0;
+  width: fit-content;
+  font-size: 1.3rem;
+}
+.listContainer .cardRow {
+  display: flex;
+  flex-direction: row;
+  padding: 3.2rem 2rem 12.5rem;
+  overflow-x: auto;
+  margin-top: -3rem;
+  margin-left: -3rem;
+  transition: all .3s ease-in-out;
+}
+.listContainer .cardRow::-webkit-scrollbar {
+  display: none;
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 14rem;
+  height: 9rem;
+  background-color: #252525;
+  border-radius: 0.28rem;
+  margin-right: 0.3rem;
+  transition: all 300ms ease;
+  z-index: 1;
+  cursor: pointer;
+}
+.card:hover {
+  transform: scale(1.45);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6), 0 6px 6px rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+.card:hover .cardPoster {
+  height: 85%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.card:hover .cardInfo {
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.75), 0 6px 6px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+.card .cardPoster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.28rem;
+}
+.card .cardInfo {
+  min-height: fit-content;
+  background-color: #141414;
+  border-bottom-left-radius: 0.28rem;
+  border-bottom-right-radius: 0.28rem;
+  display: none;
+  padding: 0.4rem;
+  font-size: inherit;
+}
+
+.actionRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.textDetails {
+  padding: 0.2rem 0.3rem;
+  font-size: 0.75rem;
+}
+.textDetails .greenText {
+  color: #53d853;
+  font-weight: bold;
+  padding: 0.2rem;
+  padding-left: 0;
+}
+.textDetails .rating {
+  border: #fff 80 solid 1px;
+  padding: 0 0.2rem;
+  margin: 0 0.2rem;
+}
+.textDetails .regularText {
+  font-weight: 400;
+}
+
+.movieRow__left,
+.movieRow__right{
+  position: absolute;
+  width: 40px;
+  height: 144px;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.movieRow__left{
+  left: 0;
+}
+
+.movieRow__right{
+  right: 0;
+}
+
+.cardRow:hover .movieRow__left,
+.cardRow:hover .movieRow__right{
+  opacity: 1;
+}
+
+.longCard {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 14rem;
+  height: 24rem;
+  background-color: #252525;
+  border-radius: 0.28rem;
+  margin-right: 0.3rem;
+  transition: all 320ms ease-in-out;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.longCard:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.6), 0 4px 4px rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+.longCard:hover .cardPoster {
+  mask-image: linear-gradient(to bottom, #141414 70%, transparent 100%);
+}
+.longCard:hover .cardMore {
+  display: flex;
+  flex-direction: column;
+}
+.longCard .cardPoster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.28rem;
+}
+.cardMore {
+  border-bottom-left-radius: 0.28rem;
+  border-bottom-right-radius: 0.28rem;
+  display: none;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 0.4rem;
+  z-index: 8;
+}
+.cardPoster .actionRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cardPoster .row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.cardPoster .textDetails {
+  padding: 0.2rem 0.3rem;
+  font-size: 0.75rem;
+}
+.row .regularText,
+.row .row,
+.row .dot{
+  display: inline-block;
+  margin-right: 2px;
+  margin-left: 2px;
+}
+.cardPoster .textDetails .greenText {
+  display: inline-block;
+  color: #53d853;
+  font-weight: bold;
+  padding: 0.2rem;
+  padding-left: 0;
+}
+.cardPoster .textDetails .rating {
+  border: #fff 80 solid 1px;
+  padding: 0 0.2rem;
+  margin: 0 0.2rem;
+}
+.cardPoster .textDetails .regularText {
+  font-weight: 400;
+}
+.cardPoster .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 2.5rem;
+  margin-left: 0.5rem;
+  overflow: visible;
+  width: 11rem;
+  margin-top: -3.5rem;
+  margin-bottom: -3.5rem;
+}
+.cardPoster .container .rank {
+  font-size: 13rem;
+  font-weight: 900;
+  -webkit-text-stroke: 5px #7c7c7c;
+  -webkit-text-fill-color: #000;
+  margin-right: -2rem;
+  margin-bottom: 1.4rem;
+  padding: 0 !important;
+  cursor: pointer;
+}

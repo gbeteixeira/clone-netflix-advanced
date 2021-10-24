@@ -1,0 +1,117 @@
+.container__modal {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+.overlay__modal{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 550;
+}
+.modal {
+  background-color: #141414;
+  color: #fff;
+  z-index: 600;
+  min-width: 55%;
+  max-width: 60%;
+  position: absolute;
+  align-self: center;
+  justify-self: center;
+  border-radius: 0.7rem;
+  overflow: hidden;
+}
+.cross__modal {
+  position: absolute;
+  top: 3%;
+  right: 2%;
+  cursor: pointer;
+  background-color: #141414 b3;
+  padding: 0.2rem 0.5rem;
+  border-radius: 50%;
+}
+.greenText {
+  color: #53d853;
+  font-weight: bold;
+  padding: 0.35rem;
+}
+.bottomContainer {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+.bottomContainer .column {
+  margin-top: -11rem;
+  margin-left: 3.5rem;
+  max-width: 50%;
+  margin-bottom: 2rem;
+}
+.bottomContainer .column .genre {
+  display: flex;
+  flex-direction: row;
+  color: #fff 80;
+}
+.bottomContainer .column .row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  color: white;
+}
+.spotlight {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 84vh;
+  background-color: #141414;
+}
+.spotlight__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  z-index: 0;
+  object-fit: fill;
+  mask-image: linear-gradient(to bottom, #141414 36%, transparent 100%);
+}
+.spotlight .details__modal {
+  z-index: 10;
+  width: 55%;
+  margin-left: 3rem;
+  margin-top: 4rem;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-shadow: 2px 2px 4px #000;
+}
+.spotlight .details__modal .title__modal {
+  font-weight: 600;
+  padding: 0.4rem;
+}
+.spotlight .buttonRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+@media only screen and (max-width: 1000px) {
+  .modal {
+    max-width: 70%;
+ }
+}
+@media only screen and (max-width: 500px) {
+  .modal {
+    max-width: 90%;
+ }
+}

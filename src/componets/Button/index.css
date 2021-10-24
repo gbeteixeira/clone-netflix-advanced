@@ -1,0 +1,68 @@
+.button {
+  z-index: 10;
+  color: #000;
+  text-shadow: none;
+  width: fit-content;
+  padding: 0.7rem 1.8rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0.4rem;
+  outline: none;
+  border: none;
+}
+.button:hover {
+  opacity: 0.8;
+}
+.button .label {
+  font-weight: bold;
+  margin-left: 0.8rem;
+}
+
+.roundButton {
+  z-index: 10;
+  color: #000;
+  text-shadow: none;
+  padding: 0.4rem;
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  height: min-content;
+  justify-content: center;
+  align-items: center;
+  margin: 0.2rem;
+  outline: none;
+  border: none;
+  width: min-content;
+}
+.roundButton:hover {
+  opacity: 0.8;
+}
+.roundButton .icon {
+  font-size: 1rem;
+}
+.outlineRounded {
+  z-index: 10;
+  background-color: rgba(42, 42, 42, 0.99) !important;
+  padding: 0.3rem;
+  border-radius: 100%;
+  cursor: pointer;
+  width: min-content;
+  height: min-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0.2rem;
+  outline: none;
+  border: 2.2px solid rgb(255, 255, 255, 0.30) ;
+  font-size: 1rem;
+}
+
+.outlineRounded:hover {
+  border-color: #fff;
+}
