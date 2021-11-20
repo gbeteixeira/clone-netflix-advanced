@@ -3,6 +3,7 @@
   flex-direction: column;
   text-transform: capitalize;
   margin-top: -9rem;
+  overflow-x: auto;
 }
 .listContainer .category {
   margin-left: 3rem;
