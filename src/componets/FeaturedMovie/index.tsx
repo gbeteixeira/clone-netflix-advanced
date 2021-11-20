@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, {useContext} from 'react';
+import React from 'react';
 import './index.css';
-import { ModalContext } from "../../context/ModalContext";
 
 export default function FeaturedMovie({item} :any) {
 
@@ -13,13 +12,6 @@ export default function FeaturedMovie({item} :any) {
     genres.push(item.genres[i].name);
   }
 
-  const { setModalData, setIsModal } = useContext(ModalContext);
-
-  const onClick = (data: any) => {
-    console.log(data);
-    setModalData(data);
-    setIsModal(true);
-  };
 
   return (
       <section className="featured-movie" style={{
@@ -37,7 +29,7 @@ export default function FeaturedMovie({item} :any) {
             </div>
             <div className="featured__overview">{item.overview}</div>
             <div className="featured__buttons">
-            <a className="button__watch" onClick={() => onClick(item)} href="#">► Assistir</a>
+            <a className="button__watch" href="#">► Assistir</a>
             <a className="button__my_list" href={`/list/add/${item.id}`}>+ Minha Lista</a>
             </div>
             <div className="featured__genres"><strong>Gêneros</strong> {genres.join(', ')}</div>
